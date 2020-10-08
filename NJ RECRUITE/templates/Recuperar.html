@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/file/login.css">
+</head>
+<body>
+    <Form action="http://127.0.0.1:5000/Recuperada" method=GET id="form">
+        <div class = "form">
+            <h1>Recupera tu contraseña</h1>
+            <div class="grupo">
+                {% for user in users %}
+                <INPut type="text" name="correo" id="name" value="{{user.3}}"  required><span class="barra"></span></INPut>
+                <label name = "correo">Correo</label>
+                {% endfor %}
+                
+            </div>
+            <div class="grupo">
+                
+                <INPut type="password" name="contra" id="name" value=""  required><span class="barra"></span></INPut>
+                <label name = "correo">Contraseña</label>
+                
+                
+            </div>            
+            <button type="submit">Recuperar</button>
+        </div>
+
+    </Form>
+    <script></script>
+</body>
+</html>
